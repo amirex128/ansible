@@ -1,0 +1,8 @@
+[program:openvpn]
+process_name=%(program_name)s
+command=/usr/sbin/openvpn --config {{path_openvpn_config}}
+autostart=true
+autorestart=true
+startretries=10
+user=root
+stdout_logfile=/var/log/openvpn/openvpn.log

@@ -1,0 +1,37 @@
+---
+- name: install openvpn
+  apt:
+    name: openvpn
+    state: present
+
+- name: install supervisor
+  apt:
+    name: supervisor
+    state: present
+
+- name: start supervisor service
+  service:
+    name: supervisor
+    state: started
+
+- name: add config to supervisor
+  template:
+    src: supervisor_openvpn.conf.j2
+    dest: /etc/supervisor/conf.d/openvpn.conf
+    owner: root
+    group: root
+    mode: 0644
+
+- name:  copy openvpn file
+  copy:
+    src: amir_shirdel.ovpn
+    dest: "{{path_openvpn_config}}"
+
+- name: reread supervisor
+  command: "/usr/bin/supervisorctl {{item}}"
+  loop:
+    - reread
+    - update
+
+- name: start openvpn service
+  command: /usr/bin/supervisorctl start openvpn

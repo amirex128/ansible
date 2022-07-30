@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="dbee368d-8064-45ab-a808-f5c40113a0b9" name="vm1" url="http://192.168.107.50">
+        <fileTransfer rootFolder="/home/ans" host="192.168.107.50" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="a96ca124-7a37-49db-bdb0-4d6fb6d5a3f3" name="vm2" url="http://192.168.107.51">
+        <fileTransfer rootFolder="/home/ans" host="192.168.107.51" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="feaab0dc-1aa5-44f3-9856-94b19a912550" name="vm3" url="http://192.168.107.52">
+        <fileTransfer rootFolder="/home/ans" host="192.168.107.52" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="34cd6ff8-15c4-4e7f-8438-98703da952b4" name="vm4" url="http://192.168.107.53">
+        <fileTransfer rootFolder="/home/ans" host="192.168.107.53" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,5 @@
+---
+- name: relaod network
+  service:
+    name: NetworkManager
+    state: reloaded
